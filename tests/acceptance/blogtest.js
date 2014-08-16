@@ -1,7 +1,9 @@
 'use strict'
 
+// var casper = require('casper').create();
+
 casper.test.begin('testing blog', 2, function suite(test) {
-  casper.start('http://localhost:9000/', function() {
+  casper.start('http://awesome-sauce-blog.herokuapp.com/', function() {
     test.assertHttpStatus(200);
   });
 
