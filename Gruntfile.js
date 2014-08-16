@@ -117,6 +117,14 @@ module.exports = function(grunt) {
         'test/spec/{,*/}*.js'
       ]
     },
+    casperjs: {
+      options: {
+        async: {
+          parallel: false
+        }
+      },
+      files: ['tests/acceptance/**/*.js']
+    },
     mocha: {
       all: {
         options: {
@@ -417,6 +425,7 @@ module.exports = function(grunt) {
     'autoprefixer',
     'connect:test',
     'mocha',
+    'casperjs',
     'watch'
   ]);
 
